@@ -91,12 +91,13 @@ main {
      grid-area: main;
      /* background-color: #ff6961; */
      display: grid;
-     grid-template-rows: calc(100vh - 89px) 100vh auto auto;
+     grid-template-rows: calc(100vh - 89px) 100vh auto auto auto;
      grid-template-areas: 
           'hello'
           'alessandro'
           'aboutMe'
-          'skills';
+          'skills'
+          'myworks';
 }
 
 main .hello {
@@ -273,4 +274,34 @@ main .aboutMe {
      height: 100px;
      margin-top: 30px;
 }
+
+.myworks {
+     grid-area: myworks;
+     padding: 0 8% 10% 8%;
+     text-align: center;
+}
+
+.myworks h1 {
+     font-family: 'Baloo 2',cursive;
+     font-size: 4rem;
+     text-shadow: 2px 2px 8px grey;
+}
+
+.myworks ul {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.myworks ul li {
+     flex-basis: 50%;
+     margin: 30px;
+}
+.myworks ul li img {
+     width: 100%;
+     height: auto;
+}
+
+
+
 
