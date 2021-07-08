@@ -8,6 +8,7 @@
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&display=swap" rel="stylesheet">
+     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
      <link rel="stylesheet" href="css/style.css">
      <script src="js/script.js"></script>
      <title>Document</title>
@@ -66,9 +67,37 @@
                     </div>
                     <h1>My softskills</h1>
                     <ul class="softskills">
-                         <li class="passione">Passione</li>
-                         <li class="determinazione">Determinazione</li>
-                         <li class="creativita">Creatività</li>
+                         <li v-for="(softskill, index) in softskills" :class="softskill" @click="showSoftskills(index)">
+                              {{softskill}}
+                         </li>
+                    </ul>
+                    <div v-if="softskillInput == 0">
+                         <p>Mi piace scrivere: mi aiuta a mettere in ordine, capire e decodificare quello che la mia mente sta immaginando. <br>
+                            Scrivere un testo e scrivere del codice non sono azioni così diverse: non provo stanchezza, ma piacere nel farlo. <br>
+                            Quando scrivo penso sempre a chi leggerà il mio codice: mi impegno a usare gli elementi migliori e semanticamente più adatti.
+                         </p>
+                    </div>
+                    <div v-else-if="softskillInput == 1">
+                         <p>Sono un perfezionista: voglio sempre che il risultato sia perfetto, non eccellente. <br>
+                            Quando un layout, o un concetto logico, non mi trasmette completa soddisfazione non mi accontento: riprovo e riprovo, finchè non raggiungo la mia personale approvazione. <br>
+                            Quando scrivo codice sono molto determinato: voglio che il risultato finale sia corretto e non mi faccio buttare a terra dagli imprevisti.
+                         </p>
+                    </div>
+                    <div v-if="softskillInput == 2">
+                         <p>Amo tutto ciò che è creativo: mi fa sentire originale. <br>
+                            Adoro creare storie e adoro creare layouts, ponendo attenzione nel raggiungere un equilibrio finale. <br>
+                            Mi piace provare sia design colorati e stravaganti , che design puliti e minimali: la programmazione Front-end mi fa sentire libero di poter mettere in atto qualsiasi idea. 
+                         </p>
+                    </div>
+               </section>
+
+               <section class="skills">
+                    <h1>My Skills</h1>
+                    <ul>
+                         <li v-for="(skill, skillIndex) in skills">
+                              <h2>{{skill}}</h2>
+                              <img :src="skillImage + skill + '.png' " alt="">
+                         </li>
                     </ul>
                </section>
           </main>
