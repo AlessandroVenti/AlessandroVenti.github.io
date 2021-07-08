@@ -295,7 +295,7 @@ main .aboutMe {
 
 .myworks ul li {
      flex-basis: 50%;
-     margin: 30px;
+     margin: 50px;
 }
 .myworks ul li img {
      width: 100%;
