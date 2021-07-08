@@ -6,9 +6,11 @@
      font-family: 'Quicksand', sans-serif;
      list-style-type: none;
      text-decoration: none;
+     scroll-behavior: smooth;
 }
 
 #app {
+     scroll-behavior: smooth;
      background-color: #fafafa;
      display: grid;
      grid-template-columns: 1fr;
@@ -80,11 +82,11 @@ header ul li::before {
 header ul li:hover::after,
 header ul li:hover::before {
      width: 100%;
-     border-color: black;
+     border-color: #ffc244;
 }
 
 header ul li a{
-     color: black;
+     color: #25385f;
 }
 
 main {
@@ -109,11 +111,14 @@ main .hello {
      opacity: 0.1;
      height: calc(100vh - 89px);
      background-attachment: fixed;
+}
+
+main .hello:hover {
      animation: opacity 2.5s linear infinite;
 }
 
 main .alessandro {
-     background-color: #f88d87;
+     background-color: #25385f;
      display: flex;
      justify-content: center;
      align-items: center;
@@ -128,7 +133,7 @@ main .alessandro {
      /* font-family: 'Baloo 2', cursive; */
      font-size: 2rem;
      font-weight: 300;
-     text-shadow: 2px 2px 8px #FF0000;
+     color:#ffc244;
 }
 
 .alessandro div h2 {
@@ -136,43 +141,41 @@ main .alessandro {
      font-weight:800;
      font-size: 4rem;
      color: white;
-     text-shadow: 2px 2px 8px #FF0000;
+     text-shadow: 2px 2px 8px rgb(1, 1, 196);
 }
 
-main .aboutMe {
+main #aboutMe {
      grid-area: aboutMe;
-     padding: 10% 8%;
+     padding: 100px 8% 0 8%;
      text-align: center;
 }
 
-.aboutMe h1 {
-     font-family: 'Baloo 2',cursive;
+#aboutMe h1 {
+     font-family: 'Merriweather Sans', sans-serif;
      font-size: 4rem;
-     text-shadow: 2px 2px 8px grey;
+     color: #ffc244;
 }
 
-.aboutMe h1:hover {
-     animation: scalee 1.5s infinite;
-}
-
-.aboutMe div {
+#aboutMe div {
      text-align: left;
 }
 
-.aboutMe p {
+#aboutMe p {
      font-size: 1.5rem;
-     margin: 30px 0 250px 0;
+     margin: 100px auto 100px auto;
      line-height: 50px;
+     width: 900px;
+     color: #25385f;
 }
 
-.aboutMe .softskills {
+#aboutMe ul {
      display: flex;
      justify-content: center;
      align-items: center;
-     margin: 100px 0;
+     margin: 100px 0 0 0;
 }
 
-.softskills li {
+#aboutMe ul li {
      display: flex;
      justify-content: center;
      align-items: center;
@@ -182,64 +185,40 @@ main .aboutMe {
      margin: 30px;
      font-size: 2rem;
      flex-basis: calc(100% / 3);
-}
-
-.softskills .scrittura {
-     color: red;
-     text-shadow: 2px 2px 8px red;
-     transition: all 0.5s linear;
-     text-transform: capitalize;
-}
-
-.scrittura:hover {
-     background-color: #FF0000;
-     color: white;
-     text-shadow: 2px 2px 8px black;
-}
-
-.softskills .creativita {
      color: #ffc244;
-     text-shadow: 2px 2px 8px #ffc244;
-     transition: all 0.5s linear;
+     background-color:#25385f;
      text-transform: capitalize;
+     transition: all 0.5s linear;
+     cursor: pointer;
 }
 
-.creativita:hover {
+#aboutMe ul li:hover {
      background-color: #ffc244;
-     color: white;
-     text-shadow: 2px 2px 8px black;
+     color: #25385f;
 }
 
-.softskills .determinazione {
-     color: #00a082;
-     text-shadow: 2px 2px 8px #00a082;
-     transition: all 0.5s linear;
-     text-transform: capitalize;
-} 
-
-.determinazione:hover {
-     background-color:  #00a082;
-     color: white;
-     text-shadow: 2px 2px 8px black;
+#aboutMe ul li.softskillActive {
+     background-color: #ffc244;
+     color: #25385f;
 }
 
-.aboutMe div:last-child {
-     padding: 20px 10%;
+#aboutMe div:last-child {
+     padding: 0 10%;
 }
 
-.skills {
+#skills {
      grid-area: skills;
-     padding:  0 8% 10% 8%;
+     padding:  100px 8% 0 8%;
      text-align: center;
 }
 
-.skills h1 {
-     font-family: 'Baloo 2',cursive;
+#skills h1 {
+     font-family: 'Merriweather Sans', sans-serif;
      font-size: 4rem;
-     text-shadow: 2px 2px 8px grey;
+     color: #ffc244;
 }
 
-.skills ul {
+#skills ul {
      display: flex;
      justify-content: center;
      align-items: center;
@@ -247,8 +226,8 @@ main .aboutMe {
      margin: 50px 0;
 }
 
-.skills li {
-     flex-basis: calc(100% / 5);
+#skills li {
+     flex-basis: 200px;
      padding: 20px;
      border-radius: 8px;
      background: #fafafa;
@@ -258,48 +237,59 @@ main .aboutMe {
      transition: box-shadow 0.5s linear;
 }
 
-.skills li:hover {
+#skills li:hover {
      box-shadow:  20px 20px 60px #d5d5d5,
              -20px -20px 60px #ffffff;
 }
 
-.skills li h2 {
+#skills li h2 {
      font-size: 2rem;
      text-transform: capitalize;
-     text-shadow: 2px 2px 8px rgb(209, 208, 208);
 }
 
-.skills img {
+#skills img {
      width: auto;
      height: 100px;
      margin-top: 30px;
 }
 
-.myworks {
+#myworks {
      grid-area: myworks;
-     padding: 0 8% 10% 8%;
+     padding: 100px 8% 10% 8%;
      text-align: center;
+     color:#ffc244;
 }
 
-.myworks h1 {
-     font-family: 'Baloo 2',cursive;
+#myworks h1 {
+     font-family: 'Merriweather Sans', sans-serif;
      font-size: 4rem;
-     text-shadow: 2px 2px 8px grey;
 }
 
-.myworks ul {
+#myworks ul {
      display: flex;
      justify-content: center;
      align-items: center;
+     flex-wrap: wrap;
+     padding: 100px 0;
 }
 
-.myworks ul li {
-     flex-basis: 50%;
+#myworks ul li {
+     flex-basis: calc(50% - 100px);
      margin: 50px;
+     border: 1px solid #25385f;
+     border-radius: 8px;
+     padding: 20px;
 }
-.myworks ul li img {
+
+#myworks ul li img {
      width: 100%;
      height: auto;
+     border-radius: 8px;
+     transition: transform 0.2s linear;
+}
+
+#myworks ul li img:hover {
+     transform: scale(1.5);
 }
 
 

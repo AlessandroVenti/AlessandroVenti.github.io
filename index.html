@@ -8,6 +8,7 @@
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
      <link rel="stylesheet" href="css/style.css">
@@ -22,20 +23,20 @@
 
                <ul>
                     <li>
-                         <a href="">
-                              Home
-                         </a>
-                    </li>
-
-                    <li>
-                         <a href="">
+                         <a href="#aboutMe">
                               About me
                          </a>
                     </li>
 
                     <li>
-                         <a href="">
-                              My works
+                         <a href="#skills">
+                              My Skills
+                         </a>
+                    </li>
+
+                    <li>
+                         <a href="#myworks">
+                              My Works
                          </a>
                     </li>
 
@@ -58,7 +59,7 @@
                     </div>
                </section>
 
-               <section class="aboutMe">
+               <section id="aboutMe">
                     <h1>About me</h1>
                     <div>
                          <p>Appassionato dalla scrittura e dalla tecnologia web, con particolare accento al design e al fantastico mondo della programmazione front-end. <br> 
@@ -68,7 +69,7 @@
                     </div>
                     <h1>My softskills</h1>
                     <ul class="softskills">
-                         <li v-for="(softskill, index) in softskills" :class="softskill" @click="showSoftskills(index)">
+                         <li v-for="(softskill, index) in softskills" :class="softskillInput == index ? 'softskillActive' : '' " @click="showSoftskills(index)">
                               {{softskill}}
                          </li>
                     </ul>
@@ -92,7 +93,7 @@
                     </div>
                </section>
 
-               <section class="skills">
+               <section id="skills">
                     <h1>My Skills</h1>
                     <ul>
                          <li v-for="(skill, skillIndex) in skills">
@@ -102,19 +103,57 @@
                     </ul>
                </section>
 
-               <section class="myworks">
+               <section id="myworks">
                     <h1>My works</h1>
                     <ul>
                          <li>
                               <a href="">
-                                   <img src="img/boolzapp.png" alt="">
+                                   <img src="img/proj.png" alt="">
                               </a>
                          </li>
 
-                         <li>
-                              <a href="https://alessandroventi.github.io/vue-boolzapp/">
-                                   <img src="img/boolzapp.png" alt="">
-                              </a>
+                         <li>          
+                              <img src="img/boolzapp.png" alt="">
+                         </li>
+
+                         <li>                             
+                              <img src="img/boolflix.png" alt="">
+                         </li>
+
+                         <li>                              
+                              <img src="img/DeliverBoo1.png" alt="">
+                         </li>
+
+                         <li>                              
+                              <img src="img/DeliverBoo2.png" alt="">
+                         </li>
+
+                         <li>                              
+                              <img src="img/DeliverBoo3.png" alt="">
+                         </li>
+
+                         <li>                             
+                              <img src="img/Spotify.png" alt="">
+                         </li>
+
+                         <li>                             
+                              <img src="img/digitalOcean1.png" alt="">
+                         </li>
+
+                         <li>                             
+                              <img src="img/DigitalOcean2.png" alt="">
+                         </li>
+
+                         <li>                             
+                              <img src="img/Hubspot1.png" alt="">
+                         </li>
+
+                         <li>                             
+                              <img src="img/Hubspot2.png" alt="">
+                         </li>
+
+                         <li>                             
+                              <img src="img/Hubspot3.png" alt="">
                          </li>
                     </ul>
                </section>
