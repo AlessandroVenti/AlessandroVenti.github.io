@@ -290,6 +290,7 @@ main #aboutMe {
 
 #myworks ul li img:hover {
      transform: scale(1.5);
+     /* transform: scale(1.5); */
 }
 
 
