@@ -1355,7 +1355,38 @@ footer {
 
      #skills .skills-badge2 li:last-child img {
           height: 54px;
-          width: auto;
-          
+          width: auto;    
+     }
+
+     #works {
+          padding: 10% 3% 0 3%;
+          grid-template-rows: 300px auto;
+     }
+
+     #works .works-text h2 {
+          text-align: left;
+          font-size: 60px;
+     }
+
+     #works .works-text h2:last-child {
+          text-align: left;
+          font-size: 65px;
+     }
+
+     #works .works-image img {
+          height: 138px;
+          }
+
+     #works .works-badge > img {
+          display: none;
+     }
+
+     #works .works-badge ul li img {
+          width: 400px;
+          transition: transform 0.2s linear;
+     }
+
+     #works .works-badge ul li img:hover {
+          transform: scale(1.5);
      }
 }
