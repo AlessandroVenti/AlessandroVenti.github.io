@@ -1078,7 +1078,7 @@ main {
      #what-love {
           padding: 10% 3% 0 3%;
           align-items: flex-start;
-          grid-template-columns: 225px 1fr;
+          grid-template-columns: 196px 1fr;
           grid-template-rows: 232px 1fr;
           grid-template-areas: 
           'lovetext loveimage'
@@ -1091,7 +1091,7 @@ main {
      }
 
      #what-love .love-text h2 span {
-          font-size: 96px;;
+          font-size: 65px;
           }
 
      #what-love .love-image {
@@ -1099,7 +1099,7 @@ main {
      }
 
      #what-love .love-image img {
-          width: 200px;
+          width: 136px;
           height: auto;
           }
 
@@ -1109,5 +1109,102 @@ main {
 
      #what-love .love-badge > div {
           margin: 15px 0;
+     }
+
+     #what-love .love-badge > div:hover {
+          transform: scale(1.2);
+          }
+
+     #softskills {
+          padding: 10% 3% 0 3%;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 180px 180px auto 1fr;
+          grid-template-areas: 
+                    "softskillstext softskillstext"
+                    "softskillsimage softskillsimage"
+                    "softskillsbadge softskillsbadge"
+                    "softskillsparagraph softskillsparagraph";
+     }
+
+     #softskills .softskills-text h2 {
+          text-align: left;
+          font-size: 60px;
+          width: 100%;
+     }
+
+     #softskills .softskills-text h2:last-child {
+         font-size: 65px;
+         margin-top: 0;
+
+     }
+
+     #softskills .softskills-image {
+          margin-top: 30px;
+     }
+
+     #softskills .softskills-image img {
+          width:200px;
+     }
+
+     #softskills .softskills-badge {
+          flex-direction: column;
+          margin-top: 50px;
+     }
+
+     #softskills .softskills-badge li {
+          width: 244px;
+          text-align: center;
+          margin: 30px 0;
+     }
+
+     #skills {
+          grid-template-columns:  1fr 1fr;
+          /* 438px */
+          grid-template-rows: 450px auto auto;
+          gap: 5px;
+          grid-template-areas: 
+                    " skillsText skillsImage "
+                    "skillsBadge1 skillsBadge1"
+                    " skillsBadge2 skillsBadge2 ";
+     }
+
+     #skills .skills-text {
+          align-items: flex-start;
+     }
+
+     #skills .skills-text h2 {
+          font-size: 60px;
+     }
+
+     #skills .skills-text h2:last-child {
+          font-size: 65px;
+     }
+
+     #skills .skills-image img {
+          max-width:150px;
+     }
+
+     #skills .skills-badge1 li,
+     #skills .skills-badge2 li {
+          margin: 20px;
+     }
+
+     #skills .skills-badge2 {
+          flex-wrap: wrap;
+          justify-content: center;
+     }
+
+     #skills .skills-badge2 li:last-child {
+          height: 179px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+     }  
+
+     #skills .skills-badge2 li:last-child img {
+          height: 54px;
+          width: auto;
+          
      }
 }
