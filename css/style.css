@@ -583,6 +583,86 @@ main {
      width: auto;
 }
 
+#works {
+     padding: 10% 8% 0 8%;
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: 516px auto;
+     grid-template-areas: 
+               "worksText worksImage"
+               "worksBadge worksBadge";
+}
+
+#works .works-text {
+     grid-area: worksText;
+}
+
+#works .works-text h2 {
+     font-family: 'Fredoka One', cursive;
+     font-size: 120px;
+     color: #25385F;
+     line-height: 109px;
+     word-spacing: 5px;
+     text-align: center;
+}
+
+#works .works-text h2:last-child {
+     font-size: 120px;
+     color: #ffc254;
+}
+
+#works .works-image {
+     grid-area: worksImage;
+}
+
+#works .works-image img {
+     height: 516px;
+}
+
+#works .works-badge {
+     grid-area: worksBadge;
+     position:relative;
+}
+
+#works .works-badge > img {
+     width: 100px;
+     height: auto;
+     position: absolute;
+     top: 50%;
+     left: -9%;
+     opacity: 0.2;
+     animation: opacity 3s linear infinite;
+}
+
+#works .works-badge ul {
+     padding: 0 10%;
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     overflow: auto;
+}
+
+#works .works-badge ul li {
+     padding: 50px;
+     background: #F3F3F3;
+     border-radius: 30px;
+     text-align: center;
+     margin-right: 100px;
+     box-shadow: inset 5px 5px 10px #cfcfcf,
+                 inset -5px -5px 10px #ffffff;
+}    
+
+#works .works-badge ul li img {
+     width: 900px;
+     height: auto;
+     border-radius: 30px;
+     transition: transform 0.2s linear;
+}
+
+footer {
+     padding: 10% 8% 0 8%;
+}
+
 
 
 
@@ -653,6 +733,22 @@ main {
           height: 54px;
           width: auto;
           
+     }
+
+     #works .works-text h2 {
+          text-align: left;
+     }
+
+     #works .works-image img {
+          height: 484px;
+          }
+
+     #works .works-badge > img {
+          width: 80px;
+     }
+
+     #works .works-badge ul li img {
+          width: 700px;
      }
 
 }
@@ -819,6 +915,28 @@ main {
           
      }
 
+     #works .works-text h2 {
+          text-align: left;
+          font-size: 60px;
+     }
+
+     #works .works-text h2:last-child {
+          text-align: left;
+          font-size: 96px;
+     }
+
+     #works .works-image img {
+          height: 484px;
+          }
+
+     #works .works-badge > img {
+          width: 80px;
+     }
+
+     #works .works-badge ul li img {
+          width: 700px;
+     }
+
 }
 
 @media (max-width: 768px) AND (min-width: 501px) {
@@ -959,6 +1077,7 @@ main {
      }
 
      #skills {
+          padding: 10% 3% 0 3%;
           grid-template-columns:  1fr 1fr;
           /* 438px */
           grid-template-rows: 450px auto auto;
@@ -1006,6 +1125,38 @@ main {
           height: 54px;
           width: auto;
           
+     }
+
+     #works {
+          padding: 10% 3% 0 3%;
+          grid-template-rows: 300px auto;
+     }
+
+     #works .works-text h2 {
+          text-align: left;
+          font-size: 60px;
+     }
+
+     #works .works-text h2:last-child {
+          text-align: left;
+          font-size: 96px;
+     }
+
+     #works .works-image img {
+          height: 221px;
+          }
+
+     #works .works-badge > img {
+          display: none;
+     }
+
+     #works .works-badge ul li img {
+          width: 400px;
+          transition: transform 0.2s linear;
+     }
+
+     #works .works-badge ul li img:hover {
+          transform: scale(1.5);
      }
 
 }
