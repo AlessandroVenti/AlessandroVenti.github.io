@@ -5,8 +5,10 @@ function createVueInstance() {
           data: {
                'softskills': ['scrittura', 'determinazione', 'creativita'],
                'softskillInput': null,
-               'skills': ['html','css', 'javascript', 'jquery', 'sass', 'vue', 'mysql', 'laravel'],
+               'skills1': ['html','css', 'javascript', 'vue'],
+               'skills2': ['sass', 'jquery', 'mysql', 'laravel'],
                'skillImage' : 'img/',
+               'hamburgerFlag' : false,
           },
 
           mounted: function() {
@@ -17,6 +19,10 @@ function createVueInstance() {
           methods: {
                showSoftskills: function(index) {
                     this.softskillInput = index;
+               },
+
+               showHamburger: function() {
+                    this.hamburgerFlag = !this.hamburgerFlag;
                }
               
           }

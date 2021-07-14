@@ -7,8 +7,8 @@
      <link rel="preconnect" href="https://fonts.googleapis.com"> 
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&display=swap" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
      <link rel="stylesheet" href="css/style.css">
@@ -19,24 +19,73 @@
      <div id="app">
 
           <header>
-               <img src="img/logo.png" alt="">
+               <div class="logo">
+                    <img src="img/logo.png" alt="">
+               </div>
 
                <ul>
+
                     <li>
-                         <a href="#aboutMe">
+                         <a href="#about-me">
                               About me
                          </a>
                     </li>
 
                     <li>
-                         <a href="#skills">
-                              My Skills
+                         <a href="#softskills">
+                              Softskills
                          </a>
                     </li>
 
                     <li>
-                         <a href="#myworks">
-                              My Works
+                         <a href="#skills">
+                              Skills
+                         </a>
+                    </li>
+
+                    <li>
+                         <a href="">
+                              Works
+                         </a>
+                    </li>
+
+                    <li>
+                         <a href="">
+                              Contacts
+                         </a>
+                    </li>
+
+                    <li class="hamburger"> 
+                         <button @click="showHamburger" :class="hamburgerFlag ? 'pressed' : '' ">
+                              <div :class="hamburgerFlag ? 'line1' : '' "></div>
+                              <div :class="hamburgerFlag ? 'line2' : '' "></div>
+                              <div :class="hamburgerFlag ? 'line3' : '' "></div>
+                         </button>
+                    </li>
+               </ul>
+
+               <ul :class="hamburgerFlag ? 'dropdown' : '' ">
+                    <li>
+                         <a href="">
+                              About me
+                         </a>
+                    </li>
+
+                    <li>
+                         <a href="">
+                              Softskills
+                         </a>
+                    </li>
+
+                    <li>
+                         <a href="">
+                              Skills
+                         </a>
+                    </li>
+
+                    <li>
+                         <a href="">
+                              Works
                          </a>
                     </li>
 
@@ -46,146 +95,132 @@
                          </a>
                     </li>
                </ul>
-
           </header>
 
           <main>
-               <section class="hello"></section>
+               
+               <section class="hello">
+                    <h1>Hello.</h1>
+               </section>
 
-               <section class="alessandro">
-                    <div>
-                         <h1>I'm Alessandro Venti</h1>
-                         <h2>Junior Front-end Web Developer.</h2>
+               <section id="about-me">
+                    <div class="me">
+                         <div>
+                              <img src="img/ale 2.png" alt="">
+                         </div>
+
+                         <div>
+                              <h2>Alessandro Venti</h2>
+                         </div>
+                    </div>
+
+                    <h1>Junior Front-End Web
+                         <span>Developer</span>
+                    </h1>
+
+                    <p>Appassionato dalla scrittura e dalla tecnologia web, con particolare accento al design e al fantastico mondo della programmazione front-end. 
+                         Amo gli stimoli, voglio lasciare sempre qualcosa di mio in ogni layout. 
+                         È sempre una sfida continua: la programmazione mi sta insegnando a non abbattermi, spronandomi a migliorare sempre di più, giorno dopo giorno.
+                    </p>
+               </section>
+
+               <section id="what-love">
+                    <div class="love-text">
+                         <h2>What i <span>Love</span></h2>
+                    </div>
+
+                    <div class="love-image">
+                         <img title="https://it.pngtree.com/so/creativit%C3%A0" src="img/cuffie.png" alt="">
+                    </div>
+
+                    <div class="love-badge">
+                         <div>
+                              <div>
+                                   <div></div>
+                              </div>
+
+                              <div>
+                                   <h2>Design</h2>
+                              </div>
+                         </div>
+
+                         <div>
+                              <div>
+                                   <div></div>
+                              </div>
+
+                              <div>
+                                   <h2>Codice Front-End</h2>
+                              </div>
+                         </div>
                     </div>
                </section>
 
-               <section id="aboutMe">
-                    <h1>About me</h1>
-                    <div>
-                         <p>Appassionato dalla scrittura e dalla tecnologia web, con particolare accento al design e al fantastico mondo della programmazione front-end. <br> 
-                              Amo gli stimoli, voglio lasciare sempre qualcosa di mio in ogni layout. <br>
-                              È sempre una sfida continua: la programmazione mi sta insegnando a non abbattermi, spronandomi a migliorare sempre di più, giorno dopo giorno.
-                         </p>
+               <section id="softskills">
+                    <div class="softskills-text">
+                         <h2>My</h2>
+                         <h2>Softskills</h2>
                     </div>
-                    <h1>My softskills</h1>
-                    <ul class="softskills">
-                         <li v-for="(softskill, index) in softskills" :class="softskillInput == index ? 'softskillActive' : '' " @click="showSoftskills(index)">
-                              {{softskill}}
+
+                    <div class="softskills-image">
+                         <img title="https://it.pngtree.com/so/clipart-di-sole" src="img/sole.png" alt="">
+                    </div>
+
+                    <ul class="softskills-badge">
+                         <li v-for="(softskill, softskillIndex) in softskills" @click="showSoftskills(softskillIndex)" :class="softskillInput == softskillIndex ? 'softskillActive' : '' ">
+                              <h3>{{softskill}}</h3>
                          </li>
                     </ul>
-                    <div v-if="softskillInput == 0">
-                         <p>Mi piace scrivere: mi aiuta a mettere in ordine, capire e decodificare quello che la mia mente sta immaginando. <br>
-                            Scrivere un testo e scrivere del codice non sono azioni così diverse: non provo stanchezza, ma piacere nel farlo. <br>
-                            Quando scrivo penso sempre a chi leggerà il mio codice: mi impegno a usare gli elementi migliori e semanticamente più adatti.
+
+                    <div class="softskills-paragraph">
+                         <p v-if="softskillInput == 0">
+                              Mi piace scrivere: mi aiuta a mettere in ordine, capire e decodificare quello che la mia mente sta immaginando. <br>
+                              Scrivere un testo e scrivere del codice non sono azioni così diverse: non provo stanchezza, ma piacere nel farlo. <br>
+                              Quando scrivo penso sempre a chi leggerà il mio codice: mi impegno a usare gli elementi migliori e semanticamente più adatti.
                          </p>
-                    </div>
-                    <div v-else-if="softskillInput == 1">
-                         <p>Sono un perfezionista: voglio sempre che il risultato sia perfetto, non eccellente. <br>
-                            Quando un layout, o un concetto logico, non mi trasmette completa soddisfazione non mi accontento: riprovo e riprovo, finchè non raggiungo la mia personale approvazione. <br>
-                            Quando scrivo codice sono molto determinato: voglio che il risultato finale sia corretto e non mi faccio buttare a terra dagli imprevisti.
+
+                         <p v-else-if="softskillInput == 1">
+                              Mi ritengo un perfezionista: voglio sempre che l'effetto finale sia perfetto. <br>
+                              Quando un layout, o un concetto logico, non mi trasmette completa soddisfazione non mi accontento: riprovo e riprovo, finchè non raggiungo la mia personale approvazione. <br>
+                              Quando scrivo codice sono molto determinato: voglio che il risultato complessivo sia corretto e non mi faccio sconfiggere dagli imprevisti.
                          </p>
-                    </div>
-                    <div v-if="softskillInput == 2">
-                         <p>Amo tutto ciò che è creativo: mi fa sentire originale. <br>
-                            Adoro creare storie e adoro creare layouts, ponendo attenzione nel raggiungere un equilibrio finale. <br>
-                            Mi piace provare sia design colorati e stravaganti , che design puliti e minimali: la programmazione Front-end mi fa sentire libero di poter mettere in atto qualsiasi idea. 
+
+                         <p v-else-if="softskillInput == 2">
+                              Amo tutto ciò che è creativo: mi fa sentire originale. <br>
+                              Adoro creare storie e adoro creare layouts, ponendo attenzione nel raggiungere un equilibrio finale. <br>
+                              Mi piace provare sia design colorati e stravaganti , che design puliti e minimali: la programmazione Front-end mi fa sentire libero di poter mettere in atto qualsiasi idea.
                          </p>
                     </div>
                </section>
 
                <section id="skills">
-                    <h1>My Skills</h1>
-                    <ul>
-                         <li v-for="(skill, skillIndex) in skills">
-                              <h2>{{skill}}</h2>
-                              <img :src="skillImage + skill + '.png' " alt="">
+                    <div class="skills-text">
+                         <h2>My</h2>
+                         <h2>Skills</h2>
+                    </div>
+
+                    <div class="skills-image">
+                         <img src="img/skills.png" alt="">
+                    </div>
+
+                    <div class="white-space"></div>
+
+                    <ul class="skills-badge1">
+                         <li v-for="skill1 in skills1">
+                              <h3>{{skill1}}</h3>
+                              <img :src="skillImage + skill1 + '.png' " alt="">
+                         </li>
+                    </ul>
+
+                    <ul class="skills-badge2">
+                         <li v-for="skill2 in skills2">
+                              <h3>{{skill2}}</h3>
+                              <img :src="skillImage + skill2 + '.png' " alt="">
                          </li>
                     </ul>
                </section>
-
-               <section id="myworks">
-                    <h1>My works</h1>
-                    <ul>
-                         <li>
-                              <a href="">
-                                   <img src="img/proj.png" alt="">
-                              </a>
-                         </li>
-
-                         <li> 
-                              <a href=" https://alessandroventi.github.io/vue-boolzapp/ ">
-                                   <img src="img/boolzapp.png" alt="">
-                              </a>         
-                         </li>
-
-                         <li>                             
-                              <img src="img/boolflix.png" alt="">
-                         </li>
-
-                         <li>                              
-                              <img src="img/DeliverBoo1.png" alt="">
-                         </li>
-
-                         <li>                              
-                              <img src="img/DeliverBoo2.png" alt="">
-                         </li>
-
-                         <li>                              
-                              <img src="img/DeliverBoo3.png" alt="">
-                         </li>
-
-                         <li>                             
-                              <img src="img/Spotify.png" alt="">
-                         </li>
-
-                         <li>                             
-                              <img src="img/digitalOcean1.png" alt="">
-                         </li>
-
-                         <li>                             
-                              <img src="img/DigitalOcean2.png" alt="">
-                         </li>
-
-                         <li>                             
-                              <img src="img/Hubspot1.png" alt="">
-                         </li>
-
-                         <li>                             
-                              <img src="img/Hubspot2.png" alt="">
-                         </li>
-
-                         <li>                             
-                              <img src="img/Hubspot3.png" alt="">
-                         </li>
-                    </ul>
-               </section>
-
-               <footer id="contacts">
-                    <ul>
-                         <li>
-                              <h2>Email</h2>
-                              <h3>alessandro.venti@icloud.com</h3>
-                         </li>
-
-                         <li>
-                              <h2>Telefono</h2>
-                              <h3>333 244 7128</h3>
-                         </li>
-
-                         <li>
-                              <h2>GitHub</h2>
-                              <h3>AlessandroVenti</h3>
-                         </li>
-
-                         <li>
-                              <h2>LinkedIn</h2>
-                              <h3>@AlessandroVenti</h3>
-                         </li>
-                    </ul>
-               </footer>
+               
           </main>
-
-     </div>
-     
+     </div>     
 </body>
 </html>
