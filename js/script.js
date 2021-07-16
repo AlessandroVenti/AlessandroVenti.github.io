@@ -4,7 +4,7 @@ function createVueInstance() {
 
           data: {
                'softskills': ['scrittura', 'determinazione', 'creativita'],
-               'softskillInput': null,
+               'softskillInput': 0,
                'skills1': ['html','css', 'javascript', 'vue'],
                'skills2': ['sass', 'jquery', 'mysql', 'laravel'],
                'skillImage' : 'img/',

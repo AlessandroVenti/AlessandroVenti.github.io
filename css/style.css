@@ -317,7 +317,7 @@ main {
 }
 
 #what-love .love-badge > div:hover {
-     transform: scale(1.5);
+     transform: scale(1.1);
 }
 
 #what-love .love-badge > div {
@@ -697,41 +697,6 @@ main {
      opacity: 0;
    }
 
-/* #works .works-badge > img {
-     width: 100px;
-     height: auto;
-     position: absolute;
-     top: 50%;
-     left: -9%;
-     opacity: 0.2;
-     animation: opacity 3s linear infinite;
-}
-
-#works .works-badge ul {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     flex-wrap: wrap;
-}
-
-#works .works-badge ul li {
-     flex-basis: calc(50% - 100px);
-     padding: 20px;
-     background: #F3F3F3;
-     border-radius: 30px;
-     text-align: center;
-     margin: 50px;
-     box-shadow: inset 5px 5px 10px #cfcfcf,
-                 inset -5px -5px 10px #ffffff;
-}    
-
-#works .works-badge ul li img {
-     width: 100%;
-     height: auto;
-     border-radius: 30px;
-     transition: transform 0.2s linear;
-} */
-
 #contacts {
      padding: 10% 16% 0 16%;
 }
@@ -794,7 +759,12 @@ main {
 #contacts .contacts-box i {
      font-size: 40px;
      margin-bottom: 25px;
-     color: #ffc254
+     color: #ffc254;
+     transition: transform 0.2s linear;
+}
+
+#contacts .contacts-box i:hover {
+     transform: scale(1.2);
 }
 
 #contacts .contacts-box h5 {
@@ -1210,7 +1180,7 @@ main {
      }
 
      header ul.dropdown li:hover {
-          transform: scale(1.5);
+          transform: scale(1.2);
      }
 
      header ul.dropdown li a {
@@ -1490,7 +1460,7 @@ main {
      }
 
      header ul.dropdown li:hover {
-          transform: scale(1.5);
+          transform: scale(1.2);
      }
 
      header ul.dropdown li a {
